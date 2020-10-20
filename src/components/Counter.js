@@ -74,7 +74,6 @@ export default function Counter() {
   if (count%2 === 0) {
     style.color = 'royalblue';
     style.className = "even";
-  
   } else {
     style.color = 'crimson';
     style.className = "odd";
