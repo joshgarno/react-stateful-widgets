@@ -44,6 +44,12 @@ export default function Programmers() {
     color: 'royalblue', // 🤔 color turns to gold, when celebrating
   };
 
+  if (featured === null) {
+    style.color = 'royalblue';
+  } else {
+    style.color = 'gold';
+  };
+
   return (
     <div className='widget-programmers container'>
       <h2>Programmers</h2>
