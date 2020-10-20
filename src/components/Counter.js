@@ -46,9 +46,46 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+// import React from 'react'; /* STEP 0 */
+
+// export default function Counter() {
+//   /* STEP 1 */
+
+//   const increment = () => {
+//     /* STEP 4 */
+//   };
+//   const decrement = () => {
+//     /* STEP 5 */
+//   };
+//   const reset = () => {
+//     /* STEP 6 */
+//   };
+
+//   const style = {
+//     fontSize: '1.5em',
+//     marginBottom: '0.3em',
+//     color: 'royalblue', /* STEP 2 */
+//   };
+
+//   return (
+//     <div className='widget-counter container'>
+//       <h2>Counter</h2>
+//       <div id='count' style={style}>
+//         Number 0 is even {/* STEP 3 */}
+//       </div>
+//       <div>
+//         <button id='increment' onClick={increment}>Increment</button>
+//         <button id='decrement' onClick={decrement}>Decrement</button>
+//         <button id='resetCount' onClick={reset}>Reset</button>
+//       </div>
+//     </div>
+//   );
+// }
+
+import React, { useState } from "react"; /* STEP 0 */
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
   /* STEP 1 */
 
   const increment = () => {
@@ -64,8 +101,15 @@ export default function Counter() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
   };
+
+  if (count%2 === 0) {
+    style.color = "royalblue";
+  } else {
+    style.color = 'crimson';
+  };
+
+   /* STEP 2 */
 
   return (
     <div className='widget-counter container'>
