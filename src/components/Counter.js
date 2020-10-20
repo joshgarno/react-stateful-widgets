@@ -89,6 +89,7 @@ export default function Counter() {
   /* STEP 1 */
 
   const increment = () => {
+    setCount(count + 1);
     /* STEP 4 */
   };
   const decrement = () => {
