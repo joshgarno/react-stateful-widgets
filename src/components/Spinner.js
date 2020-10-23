@@ -44,12 +44,8 @@ export default function Spinner() {
 /* STEP 1 */
 
   const toggleSpinner = () => {
-    if (spinnerOn === true) {
-      setSpinnerOn(false);
-    } else {
-        setSpinnerOn(true);
-    };
-  /* STEP 4 */
+    (spinnerOn === true ? setSpinnerOn(false) : setSpinnerOn(true));
+  // /* STEP 4 */
   };
 
   return (

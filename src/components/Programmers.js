@@ -43,13 +43,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔 color turns to gold, when celebrating
-  };
-
-  if (featured === "") {
-    style.color = 'royalblue';
-  } else {
-    style.color = 'gold';
+    color: (featured === "" ? 'royalblue' : 'gold'), // 🤔 color turns to gold, when celebrating
   };
 
   return (
